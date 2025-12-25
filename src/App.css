@@ -1,38 +1,108 @@
-.App {
-  text-align: center;
+body {
+    font-family: 'Roboto', sans-serif;
+    scroll-behavior: smooth;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Header */
+header {
+    background: #cfcfcf;
+    color: white;
+    padding: 100px 0;
+    text-align: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2rem;
+}
+
+/* Navbar */
+.navbar a {
+    color: white !important;
+    margin-right: 15px;
+}
+.navbar a:hover {
+    color: #0c0c0c !important;
+}
+
+/* Sections */
+section {
+    padding: 80px 0;
+}
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+/* Project Card */
+.project-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Footer */
+footer {
+    background: #212529;
+    color: white;
+    text-align: center;
+    padding: 30px 0;
+}
+footer a {
+    color: #0d6efd;
+    text-decoration: none;
+}
+footer a:hover {
+    text-decoration: underline;
+}
+.profile-wrapper {
+  position: relative;
+  display: inline-block;
+  padding: 30px;
+}
+
+/* Shapeless background */
+.profile-wrapper::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #f2f4f8, #6610f2);
+  border-radius: 58% 42% 63% 37% / 40% 55% 45% 60%;
+  filter: blur(0px);
+  transform: rotate(-6deg);
+  z-index: -1;
+  animation: blobMove 8s infinite ease-in-out;
+}
+
+/* Profile image */
+.profile-float {
+  width: 220px;
+  border-radius: 50%;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  /* border: 4px solid rgba(255,255,255,0.15); */
+  /* background: #fff; */
+  animation: float 4s ease-in-out infinite;
+}
+
+/* Floating animation */
+@keyframes float {
+  0% { transform: translateY(0); }
+  25% { transform: translateY(10px); }
+  50% { transform: translateY(-80px); }
+  100% { transform: translateY(0); }
+}
+
+/* Blob animation */
+@keyframes blobMove {
+  0%, 100% {
+    border-radius: 18% 42% 60% 37% / 40% 55% 15% 60%;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+  50% {
+    border-radius: 42% 8% 37% 63% / 55% 40% 60% 45%;
   }
 }
