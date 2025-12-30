@@ -50,7 +50,7 @@ function Header() {
 
             <div className="hero-buttons">
               <Button href="#contact" className="btn-hire">Hire Me</Button>
-              <Button href="/resume.pdf" target="_blank" rel="noopener noreferrer" className="btn-resume">Resume</Button>
+              <Button href="https://drive.google.com/file/d/1Mfy2vyKWMChM2oslKtMOGA7X5F18VFOM/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="btn-resume">Resume</Button>
             </div>
 
             <div className="hero-stats">
