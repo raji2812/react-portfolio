@@ -2,16 +2,16 @@ import React, { useState } from 'react';
 import { Container, Row, Col, Form, Button, Alert, Spinner } from 'react-bootstrap';
 import emailjs from '@emailjs/browser';
 
-// EmailJS Configuration - Replace these with your actual values from emailjs.com
-const EMAILJS_SERVICE_ID = 'YOUR_SERVICE_ID';  // e.g., 'service_abc123'
-const EMAILJS_TEMPLATE_ID = 'YOUR_TEMPLATE_ID'; // e.g., 'template_xyz789'
-const EMAILJS_PUBLIC_KEY = 'YOUR_PUBLIC_KEY';   // e.g., 'AbCdEfGhIjKlMnOp'
+// EmailJS Configuration
+const EMAILJS_SERVICE_ID = 'service_izj80kd';
+const EMAILJS_TEMPLATE_ID = 'template_5h8kx8a';
+const EMAILJS_PUBLIC_KEY = 'HOIbeeXy_EYVLL_T8';
 
 function Contact() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
-  const [status, setStatus] = useState(null); // 'sending', 'success', 'error'
+  const [status, setStatus] = useState(null);
   const [errorText, setErrorText] = useState('');
 
   const handleSubmit = async (e) => {
@@ -33,17 +33,19 @@ function Contact() {
       }
 
       // 2. Send email via EmailJS (to owner)
-      await emailjs.send(
-        EMAILJS_SERVICE_ID,
-        EMAILJS_TEMPLATE_ID,
-        {
-          from_name: name || 'Anonymous',
-          from_email: email,
-          message: message,
-          to_name: 'Owner', // Your name
-        },
-        EMAILJS_PUBLIC_KEY
-      );
+      if (EMAILJS_SERVICE_ID && EMAILJS_TEMPLATE_ID && EMAILJS_PUBLIC_KEY) {
+        await emailjs.send(
+          EMAILJS_SERVICE_ID,
+          EMAILJS_TEMPLATE_ID,
+          {
+            from_name: name,
+            from_email: email,
+            message: message,
+            to_name: 'Owner',
+          },
+          EMAILJS_PUBLIC_KEY
+        );
+      }
 
       setStatus('success');
       setName('');
@@ -51,7 +53,8 @@ function Contact() {
       setMessage('');
     } catch (err) {
       setStatus('error');
-      setErrorText(err.message || 'Submission failed');
+      console.error('Contact form error:', err);
+      setErrorText(err.text || err.message || 'Submission failed');
     }
   };
 
@@ -68,7 +71,7 @@ function Contact() {
                 {status === 'error' && <Alert variant="danger">{errorText}</Alert>}
                 <Form.Group className="mb-3" controlId="name">
                   <Form.Label>Name</Form.Label>
-                  <Form.Control value={name} onChange={(e) => setName(e.target.value)} type="text" placeholder="Your Name" />
+                  <Form.Control value={name} onChange={(e) => setName(e.target.value)} type="text" placeholder="Your Name" required />
                 </Form.Group>
                 <Form.Group className="mb-3" controlId="email">
                   <Form.Label>Email</Form.Label>

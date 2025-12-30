@@ -8,16 +8,16 @@ function Skills() {
         <h2 className="section-title">My Skills</h2>
         <Row className="text-center">
           <Col md={3} className="mb-4">
-            <h5>HTML/CSS</h5>
+            <h5>Frontend</h5>
             <ProgressBar now={95} label="95%" />
           </Col>
           <Col md={3} className="mb-4">
-            <h5>JavaScript</h5>
-            <ProgressBar now={90} label="90%" variant="success" />
+            <h5>React</h5>
+            <ProgressBar now={90} label="80%" variant="success" />
           </Col>
           <Col md={3} className="mb-4">
-            <h5>React</h5>
-            <ProgressBar now={85} label="85%" variant="info" />
+            <h5>Mysql</h5>
+            <ProgressBar now={85} label="80%" variant="info" />
           </Col>
           <Col md={3} className="mb-4">
             <h5>Bootstrap</h5>
