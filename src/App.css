@@ -1064,7 +1064,7 @@ section {
     left: 0;
     right: 0;
     height: 140px;
-    background:
+    /* background:
         radial-gradient(ellipse 130px 90px at 0% 50%, #ec4899 50%, transparent 50%),
         radial-gradient(ellipse 160px 110px at 10% 40%, #ec4899 50%, transparent 50%),
         radial-gradient(ellipse 140px 95px at 22% 55%, #ec4899 50%, transparent 50%),
@@ -1074,7 +1074,7 @@ section {
         radial-gradient(ellipse 145px 98px at 82% 50%, #ec4899 50%, transparent 50%),
         radial-gradient(ellipse 165px 110px at 95% 45%, #ec4899 50%, transparent 50%),
         radial-gradient(ellipse 135px 90px at 100% 55%, #ec4899 50%, transparent 50%);
-    z-index: 1;
+    z-index: 1; */
 }
 
 .contact-section .container {
