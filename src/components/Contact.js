@@ -20,32 +20,18 @@ function Contact() {
     setErrorText('');
 
     try {
-      // 1. Save to database via backend
-      const res = await fetch('http://localhost:5000/api/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ name, email, message }),
-      });
-
-      if (!res.ok) {
-        const body = await res.json().catch(() => ({}));
-        throw new Error(body.error || 'Server error');
-      }
-
-      // 2. Send email via EmailJS (to owner)
-      if (EMAILJS_SERVICE_ID && EMAILJS_TEMPLATE_ID && EMAILJS_PUBLIC_KEY) {
-        await emailjs.send(
-          EMAILJS_SERVICE_ID,
-          EMAILJS_TEMPLATE_ID,
-          {
-            from_name: name,
-            from_email: email,
-            message: message,
-            to_name: 'Owner',
-          },
-          EMAILJS_PUBLIC_KEY
-        );
-      }
+      // Send email via EmailJS
+      await emailjs.send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        {
+          from_name: name,
+          from_email: email,
+          message: message,
+          to_name: 'Raja Shree',
+        },
+        EMAILJS_PUBLIC_KEY
+      );
 
       setStatus('success');
       setName('');
@@ -54,12 +40,12 @@ function Contact() {
     } catch (err) {
       setStatus('error');
       console.error('Contact form error:', err);
-      setErrorText(err.text || err.message || 'Submission failed');
+      setErrorText(err.text || err.message || 'Failed to send message. Please try again.');
     }
   };
 
   return (
-    <section id="contact" className="bg-light">
+    <section id="contact" className="contact-section">
       <Container>
         <h2 className="section-title">Contact Me</h2>
         <Row className="justify-content-center">

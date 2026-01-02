@@ -21,6 +21,7 @@ function Footer() {
               <li><a href="#home">Home</a></li>
               <li><a href="#about">About</a></li>
               <li><a href="#skills">Skills</a></li>
+              <li><a href="#projects">Projects</a></li>
               <li><a href="#contact">Contact</a></li>
             </ul>
           </Col>
@@ -34,7 +35,7 @@ function Footer() {
               <a href="https://github.com/raji2812" target="_blank" rel="noopener noreferrer" className="social-link" title="GitHub">
                 <FaGithub />
               </a>
-              <a href="#" target="_blank" rel="noopener noreferrer" className="social-link" title="LinkedIn">
+              <a href="https://www.linkedin.com/in/raja-shree-govindharaju/" target="_blank" rel="noopener noreferrer" className="social-link" title="LinkedIn">
                 <FaLinkedin />
               </a>
             </div>

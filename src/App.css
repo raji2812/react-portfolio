@@ -582,7 +582,7 @@ section {
 
 /* Skills Section */
 .skills-section {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+    background: linear-gradient(135deg, #bcc6f3 0%, #8f33ef 0% 10%, #ebaaf3 80%);
     padding: 80px 0;
     position: relative;
     overflow: hidden;
@@ -614,9 +614,9 @@ section {
 .skill-badge-inner {
     width: 100%;
     height: 100%;
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(255, 255, 255, 0.25);
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 25);
     border-radius: 20px;
     display: flex;
     flex-direction: column;
@@ -1025,6 +1025,107 @@ section {
     .featured-project {
         padding: 20px;
     }
+}
+
+/* Contact Section - Cloud Background */
+.contact-section {
+    padding: 100px 0 120px;
+    position: relative;
+    background: linear-gradient(180deg, #87CEEB 0%, #87CEEB 30%, #a855f7 60%, #ec4899 100%);
+    overflow: hidden;
+}
+
+/* Top clouds - sky blue */
+.contact-section::before {
+    content: '';
+    position: absolute;
+    top: 25%;
+    left: 0;
+    right: 0;
+    height: 120px;
+    background:
+        radial-gradient(ellipse 120px 80px at 0% 50%, #87CEEB 50%, transparent 50%),
+        radial-gradient(ellipse 150px 100px at 8% 60%, #87CEEB 50%, transparent 50%),
+        radial-gradient(ellipse 130px 90px at 18% 45%, #87CEEB 50%, transparent 50%),
+        radial-gradient(ellipse 160px 110px at 30% 55%, #87CEEB 50%, transparent 50%),
+        radial-gradient(ellipse 140px 95px at 45% 50%, #87CEEB 50%, transparent 50%),
+        radial-gradient(ellipse 170px 115px at 60% 60%, #87CEEB 50%, transparent 50%),
+        radial-gradient(ellipse 135px 90px at 75% 45%, #87CEEB 50%, transparent 50%),
+        radial-gradient(ellipse 155px 105px at 88% 55%, #87CEEB 50%, transparent 50%),
+        radial-gradient(ellipse 125px 85px at 100% 50%, #87CEEB 50%, transparent 50%);
+    z-index: 1;
+}
+
+/* Bottom clouds - pink */
+.contact-section::after {
+    content: '';
+    position: absolute;
+    bottom: 8%;
+    left: 0;
+    right: 0;
+    height: 140px;
+    background:
+        radial-gradient(ellipse 130px 90px at 0% 50%, #ec4899 50%, transparent 50%),
+        radial-gradient(ellipse 160px 110px at 10% 40%, #ec4899 50%, transparent 50%),
+        radial-gradient(ellipse 140px 95px at 22% 55%, #ec4899 50%, transparent 50%),
+        radial-gradient(ellipse 180px 120px at 38% 45%, #ec4899 50%, transparent 50%),
+        radial-gradient(ellipse 150px 100px at 52% 55%, #ec4899 50%, transparent 50%),
+        radial-gradient(ellipse 175px 115px at 68% 40%, #ec4899 50%, transparent 50%),
+        radial-gradient(ellipse 145px 98px at 82% 50%, #ec4899 50%, transparent 50%),
+        radial-gradient(ellipse 165px 110px at 95% 45%, #ec4899 50%, transparent 50%),
+        radial-gradient(ellipse 135px 90px at 100% 55%, #ec4899 50%, transparent 50%);
+    z-index: 1;
+}
+
+.contact-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+.contact-section .section-title {
+    color: #1a1a2e;
+    margin-bottom: 40px;
+}
+
+.contact-section .form-control {
+    border: 2px solid #1a1a2e;
+    border-radius: 8px;
+    padding: 12px 15px;
+    font-size: 1rem;
+    background: #fff;
+}
+
+.contact-section .form-control:focus {
+    border-color: #764ba2;
+    box-shadow: 0 0 0 3px rgba(118, 75, 162, 0.2);
+}
+
+.contact-section .form-label {
+    font-weight: 600;
+    color: #1a1a2e;
+}
+
+.contact-section .btn-primary {
+    background: linear-gradient(135deg, #22c55e, #16a34a);
+    border: none;
+    padding: 14px 40px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.contact-section .btn-primary:hover {
+    background: linear-gradient(135deg, #16a34a, #15803d);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(34, 197, 94, 0.4);
+}
+
+.contact-section .btn-primary:disabled {
+    background: linear-gradient(135deg, #22c55e, #16a34a);
+    opacity: 0.7;
 }
 
 /* Footer */
