@@ -1,7 +1,6 @@
 import React from 'react';
-import { Container, Row, Col, Card, Button } from 'react-bootstrap';
-import { FaWordpress, FaExternalLinkAlt, FaCode, FaDatabase, FaMicrochip, FaPaintBrush } from 'react-icons/fa';
-import { TbLayoutGrid } from 'react-icons/tb';
+import { Container, Row, Col, Card } from 'react-bootstrap';
+import { FaWordpress, FaExternalLinkAlt, FaCode, FaMicrochip, FaPaintBrush } from 'react-icons/fa';
 
 function Projects() {
   const projects = [

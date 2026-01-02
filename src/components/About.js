@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
-import { FaGraduationCap, FaBriefcase, FaHeart, FaMapMarkerAlt, FaDownload } from 'react-icons/fa';
+import { FaGraduationCap, FaBriefcase, FaHeart, FaMapMarkerAlt } from 'react-icons/fa';
 
 function About() {
   return (
