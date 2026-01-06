@@ -9,7 +9,7 @@ function Footer() {
         <Row className="footer-content">
           <Col md={4} className="footer-section">
             <h5 className="footer-title">Raji</h5>
-            <p className="footer-tagline">Full Stack Developer</p>
+            <p className="footer-tagline">Developer | Designer</p>
             <p className="footer-description">
               Passionate about building web applications and solving complex problems with clean, efficient code.
             </p>
