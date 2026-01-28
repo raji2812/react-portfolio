@@ -69,7 +69,7 @@ function Header() {
             <div className="hero-image-wrapper">
               <div className="hero-image-bg"></div>
               <Image
-                src="https://i.pravatar.cc/300?img=12"
+                src="/Raji.jpeg"
                 roundedCircle
                 fluid
                 className="hero-image"
