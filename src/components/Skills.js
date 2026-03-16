@@ -17,11 +17,11 @@ import { TbLayoutGrid } from 'react-icons/tb';
 
 function Skills() {
   const skills = [
-    { name: 'WordPress', icon: FaWordpress, level: 90, color: '#21759b' },
-    { name: 'WPBakery', icon: TbLayoutGrid, level: 85, color: '#0073AA' },
-    { name: 'Elementor', icon: SiElementor, level: 85, color: '#92003B' },
-    { name: 'WooCommerce', icon: SiWoo, level: 80, color: '#96588a' },
-    { name: 'React', icon: FaReact, level: 75, color: '#61DAFB' },
+    { name: 'WordPress', icon: FaWordpress, level: 80, color: '#21759b' },
+    { name: 'WPBakery', icon: TbLayoutGrid, level: 80, color: '#0073AA' },
+    { name: 'Elementor', icon: SiElementor, level: 70, color: '#92003B' },
+    { name: 'WooCommerce', icon: SiWoo, level: 70, color: '#96588a' },
+    { name: 'React', icon: FaReact, level: 70, color: '#61DAFB' },
     // { name: 'JavaScript', icon: FaJs, level: 80, color: '#F7DF1E' },
     // { name: 'HTML5', icon: FaHtml5, level: 95, color: '#E34F26' },
     // { name: 'CSS3', icon: FaCss3Alt, level: 90, color: '#1572B6' },
