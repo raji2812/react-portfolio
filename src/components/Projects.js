@@ -11,7 +11,7 @@ function Projects() {
       description: 'A professional website built for Andhra Athletic Association featuring custom design, dynamic content management, and database integration for managing athletic events and members.',
       skills: ['WordPress', 'WPBakery', 'Custom Code', 'MySQL'],
       image: 'https://images.unsplash.com/photo-1552674605-db6ffd4facb5?w=800&h=600&fit=crop',
-      link: 'https://khokhofederation.in/',
+      link: 'https://andhrapradeshathleticsassociation.org/',
       featured: true
     },
     {
